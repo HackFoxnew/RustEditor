@@ -1,2 +1,5 @@
-/*App main*/
-alert("Main")
+/* App main */
+
+function OnStart () {
+  alert("hi");
+}
