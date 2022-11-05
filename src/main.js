@@ -1,0 +1,2 @@
+/*App main*/
+alert("Main")
