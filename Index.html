@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="libs/bootstrap-reboot.css">
   <link rel="stylesheet" href="libs/bootstrap-grid.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/RustEditor.css">
-  <link rel="stylesheet" href="css/Tokens.css">
   
   <!-- javascript -->
   <script src="src/main.js"></script>
@@ -20,12 +18,48 @@
 <body onload="OnStart()">
   
   <!-- bootstrap test -->
-  <div class="container">
-    <div class="row">
-      <div class="col">Rusted</div>
-      <div class="col">Editor</div>
+
+
+  
+  <h1>RustEdit</h1>
+
+<div class=" container screen Contenedor">
+  <div class="Enlazes" id="Creacion">
+   <span>Editor</span>
+  
+  <dialog id="Ventana_Creacion">
+    <h1 style="border-radius: 0;">Nuevo Proyecto</h1>
+    Crear
+     <form action="" id="form">
+    <div class="Div_Dialog">
+ 
+<input id="inputEnlaze" class="Entrada" required placeholder="Entra el nombre de tu página" type="text">
+ 
+ 
+ <span>Crear</span>
+
+<button id="Salir_Creacion" onclick="CerrarModal">Salir</button>
+
     </div>
-  </div>
+    </form>
+  </dialog>
+</div>
+
+
+<div class="Enlazes">
+  <span>Ajustes</span>
+</div>
+
+<div class="Enlazes">
+  <span>Acerca De</span>
+</div>
+
+</div>
+
+
+
+
+<!--Fin-->
   
 </body>
 

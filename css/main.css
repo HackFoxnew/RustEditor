@@ -1,2 +1,106 @@
 /*Main app styles*/
 
+*{
+  margin: 0;
+}
+
+h1{
+  padding: 20px;
+  background: #3B5EFF;
+  color: white;
+  
+}
+
+body{
+  background: #fff;
+}
+
+span{
+  color: field;
+}
+
+.Enlazes{
+  display: flex;
+  width: 80vw; 
+  align-items: center;
+  height: 10vh;
+  text-align: center;
+  border-radius: 2px;
+  margin-top: 20px;
+  background: #3B5EFF;
+  padding: 10px;
+  transition: all 500ms;
+}
+
+.Contenedor{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Enlazes:hover{
+  background:#462DFF;
+}
+
+/*CSS nuevo*/
+dialog{
+  padding: 0;
+  width: 80vw;
+  height: 70vh;
+  margin: auto;
+  animation-name: scale;
+  animation-duration: 0.5s;
+}
+
+@keyframes scale{
+  0%{
+    transform: scale(0.2);
+   }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes scaledown{
+  0%{
+    transform: scale(1);
+   }
+  100%{
+    transform: scale(0.2);
+  }
+}
+
+
+.Div_Dialog{
+  display: flex;
+  gap:10px;
+  flex-direction: column;
+  padding-top: 10px;
+}
+#Salir_Creacion{
+  border:none;
+  align-self: flex-end;
+  width: 100%;
+}
+
+input{
+  border:none;
+  border-bottom: 2px solid #3B5EFF;
+  outline: none;
+  font-family: monospace;
+}
+
+input:focus{
+  
+}
+
+/*Para futuro animaciónes*/
+button{
+  transition: all 1s;
+}
+
+button:hover{
+  opacity: .4;
+  border: none;
+}
+
