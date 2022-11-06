@@ -1,0 +1,72 @@
+/* dialog window */
+
+
+dialog.modal {
+  padding: 8px;
+  height: 150px;
+  margin: auto;
+  
+  border: none;
+  background: var(--accent-color);
+  border-radius: 5px;
+  
+  animation-name: scale;
+  animation-duration: 0.5s;
+}
+dialog::backdrop {
+  background: black;
+  opacity: 0.5;
+}
+
+/* modal */
+.modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* encabezado */
+.modal-header {
+  font-size: 1.45rem;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: solid var(--divisor-color);
+}
+
+/* cuerpo */
+.modal-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* final */
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  
+  border-top: solid var(--divisor-color);
+}
+
+@keyframes scale {
+  0% {
+    filter: opacity(0);
+    transform: scale(0.2);
+  }
+  100% {
+    filter: opacity(1);
+    transform: scale(1);
+  }
+}
+@keyframes scaledown {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.2);
+  }
+}

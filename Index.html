@@ -5,62 +5,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> RustEditor </title>
-  
+
   <!-- css styles -->
-  <link rel="stylesheet" href="libs/bootstrap-reboot.css">
-  <link rel="stylesheet" href="libs/bootstrap-grid.css">
   <link rel="stylesheet" href="css/main.css">
-  
+  <link rel="stylesheet" href="css/screen/main-screen.css">
+  <link rel="stylesheet" href="css/comp/button.css">
+  <link rel="stylesheet" href="css/comp/modal.css">
+  <link rel="stylesheet" href="css/comp/appbar.css">
+
   <!-- javascript -->
   <script src="src/main.js"></script>
 </head>
 
+
 <body onload="OnStart()">
-  
-  <!-- bootstrap test -->
 
-
-  
-  <h1>RustEdit</h1>
-
-<div class=" container screen Contenedor">
-  <div class="Enlazes" id="Creacion">
-   <span>Editor</span>
-  
-  <dialog id="Ventana_Creacion">
-    <h1 style="border-radius: 0;">Nuevo Proyecto</h1>
-    Crear
-     <form action="" id="form">
-    <div class="Div_Dialog">
- 
-<input id="inputEnlaze" class="Entrada" required placeholder="Entra el nombre de tu página" type="text">
- 
- 
- <span>Crear</span>
-
-<button id="Salir_Creacion" onclick="CerrarModal">Salir</button>
-
+  <!-- pantalla principal -->
+  <div id="main-screen" class="screen">
+   
+    <!-- barra de aplicación -->
+    <div class="app-bar"> 
+      <h1> RustEdit </h1>
     </div>
-    </form>
-  </dialog>
-</div>
+    
+    <!-- menú -->
+    <div onclick="$modalCreation.showModal()"
+         class="button"> Nuevo Proyecto </div>
+    <div class="button"> Ajustes </div>
+    <div class="button"> Acerca De </div>
+    
+    
+    <!-- modal de creación de proyecto-->
+    <dialog id="modal-creation" class="modal">
+      <div class="modal-content">
+        <div class="modal-header"> Nuevo Proyecto </div>
+        <div class="modal-body">
+          <input id="input-modal-creation" placeholder="Entra el nombre de tu página">
+        </div>
+        <div class="modal-footer">
+          <div onclick="$modalCreation.close()"
+            class="button"> Salir </div>
+          <div id="btn-creation" class="button button-disabled"> Crear </div>
+        </div>
+      </div>
+    </dialog>
+
+  </div>
 
 
-<div class="Enlazes">
-  <span>Ajustes</span>
-</div>
-
-<div class="Enlazes">
-  <span>Acerca De</span>
-</div>
-
-</div>
 
 
+  <!--Fin-->
 
-
-<!--Fin-->
-  
 </body>
 
 </html>

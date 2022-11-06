@@ -1,0 +1,28 @@
+/* buttons */
+
+
+.button {
+  min-width: 100px;
+  padding: 10px;
+  margin: 3px;
+  color: var(--primary-font-color);
+  background: var(--primary-color);
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 5px;
+  transition: all 100ms;
+}
+
+.button-disabled {
+  background: var(--primary-ligthcolor);
+}
+
+.button:active {
+  background: var(--primary-darkcolor);
+}
+.button-disabled.button:active {
+  background: auto;
+};

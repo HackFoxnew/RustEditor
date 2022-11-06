@@ -1,0 +1,10 @@
+/* Main Screen */
+
+#main-screen {}
+
+#main-screen > .button {
+  margin-top: 10px;
+  align-self: center;
+  width: 70%;
+  padding: 20px;
+}

@@ -1,44 +1,28 @@
 /* App main */
+let $mainScreen,
+    $modalCreation,
+    $inputCreation,
+    $btnModalCreation,
+    $btnCloseModalCreation;
 
+
+// evento de inicio
 function OnStart () {
-  const $VC = document.getElementById("Ventana_Creacion");
 
-const $Creacion = document.getElementById('Creacion');
-
-const $BtnSalir = document.getElementById('Salir_Creacion');
-
-const $Input_Enlaze = document.getElementById('inputEnlaze');
-
-const $Form = document.getElementById('form');
-
-$Creacion.addEventListener("click",()=>{
-  $VC.showModal()
-})
-
-function CerrarModal(){
-  $VC.close()
-}
-
-$Input_Enlaze.addEventListener("input",function InpButon(){
+  $mainScreen = document.getElementById("main-screen");
+  $modalCreation = document.getElementById("modal-creation");
+  $btnModalCreation = document.getElementById("btn-creation");
+  $inputCreation = document.getElementById("input-modal-creation");
   
-  let noValido = /\s/;
-
-  
-  if ($Input_Enlaze.value == "" || $Input_Enlaze.value == null || $Input_Enlaze == undefined || noValido.test(innerHeight.value)) {
+  // validar
+  $inputCreation.addEventListener("input", function InpButon() {
+    let classList = $btnModalCreation.classList;
+    classList.remove("button-disabled");
     
-    
-    
-    return false; 
-  }
-  
-  else{
-    let a = document.createElement("a");
-    let textA = document.createTextNode("Crear")
-    a.classList.add("Enlazes")
-    a.appendChild(textA)
-    $Form.appendChild(a)
-  }
-  
-})
+    if (!/^[ a-zA-Z0-9]+$/.test($inputCreation.value)) {
+      classList.add("button-disabled");
+    } 
+
+  })
 
 }
