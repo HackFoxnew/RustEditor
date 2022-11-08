@@ -1,3 +1,28 @@
 /* Editor Screen */
 
-#editor-screen {}
+
+
+#editor-screen {
+  color:#8F908A;
+  
+}
+
+.editor{
+  width: 100vw;
+  height: 90vh;
+  background: #2F3129;
+}
+
+.screen-editor-main-menu{
+  display: flex;
+  background: red;
+  height: 50%;
+}
+
+
+.Toolbar{
+  width: 100%;
+  height: 5%;
+  display: flex;
+  background: #555651;
+}

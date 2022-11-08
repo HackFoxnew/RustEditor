@@ -6,13 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> RustEditor </title>
 
-  <!-- css styles -->
+  <!-- css styles main -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/screen/main-screen.css">
   <link rel="stylesheet" href="css/comp/button.css">
   <link rel="stylesheet" href="css/comp/modal.css">
   <link rel="stylesheet" href="css/comp/appbar.css">
 
+  <!--Editor css-->
+  <link rel="stylesheet" href="./css/screen/editor-screen.css">
+  <link rel="stylesheet" href="./css/RustEditor.css">
+  
   <!-- javascript -->
   <script src="src/main.js"></script>
 </head>
@@ -31,8 +35,31 @@
     <!-- menú -->
     <div onclick="$modalCreation.showModal()"
          class="button"> Nuevo Proyecto </div>
-    <div class="button"> Ajustes </div>
+    <div class="button" onclick="Ajust()"> Ajustes </div>
     <div class="button"> Acerca De </div>
+    
+    
+    <dialog class="modal" id="AjustModal">
+      <div class="modal-content">
+    <div class="modal-header">Ajustes</div>
+    
+    <div class="modal-body">
+      
+      
+      <section>
+        
+        
+        
+      </section>
+      
+      
+      
+    </div>
+    
+    </div>
+    </dialog>
+    
+    
     
     
     <!-- modal de creación de proyecto-->
@@ -53,6 +80,44 @@
   </div>
 
 
+
+
+
+<!--Pantalla del editor-->
+<div id="editor-screen" class="screen">
+  
+  <!--Menu principal del Editor-->
+  <div id="editor-main-menu" class"screen-editor-main-menu">
+  <span>🗂️</span>   <span>▶️</span> <span>⚙️</span>
+  </div>
+  
+  <!--Editor-->
+    <div class="editor">
+    
+    <!--Numero de linia-->
+  <div class="frame-lines">   
+    
+  </div>  
+   
+   <!--Cuadro de autocompletado--> 
+ <div class="frame-autocomplete">
+    
+ </div>
+    
+    
+    
+     </div>
+  
+  
+  
+  
+  
+  <!--Barra de herramientas-->
+  <div id="toolbar" class="Toolbar">
+    <span>•••</span>   <span>=>|</span>  <span><</span> <span>></span>
+  </div>
+  
+</div>
 
 
   <!--Fin-->

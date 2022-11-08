@@ -1,1 +1,6 @@
 /* Editor Styles */
+
+:root{
+  --theme-editor: #333;
+  --theme-fonts-editor: #333;
+}
