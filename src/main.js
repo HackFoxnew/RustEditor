@@ -11,6 +11,7 @@ function OnStart () {
   screenManager.addScreen("main-screen");
   screenManager.addScreen("editor-screen");
   screenManager.open("main-screen"); // mostrar pantalla
+  screenManager.open("editor-screen"); // mostrar pantalla
   
   // selecionado elementos 
   $modalCreation = HTML.getElementById("modal-creation");

@@ -3,25 +3,45 @@
 
 
 #editor-screen {
-  color: #8F908A;
-}
-
-.editor{
-  width: 100vw;
-  height: 90vh;
-  background: #2F3129;
-}
-
-.screen-editor-main-menu{
-  display: flex;
-  background: red;
-  height: 50%;
+  color: var(--editor-font-color);
 }
 
 
-.Toolbar{
+#editor {
   width: 100%;
-  height: 5%;
+  flex-grow: 1;
+  overflow: auto;
+  background: var(--editor-color);
+  outline: none;
+  padding: 5px 9px;
+}
+
+/* app-bar del editor */
+#editor-main-menu {
   display: flex;
-  background: #555651;
+  background: var(--editor-lightcolor);
+}
+
+#editor-main-menu > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--editor-font-color);
+  font-size: 1.2rem;
+  
+  background: var(--editor-color);
+  border-radius: 5px;
+  padding: 2px 7px;
+  margin: 2px;
+}
+
+
+/* footer del editor */
+#editor-toolbar {
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--editor-lightcolor);
 }

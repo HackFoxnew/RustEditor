@@ -7,6 +7,7 @@
   <title> RustEditor </title>
 
   <!-- css styles main -->
+  <link rel="stylesheet" href="libs/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/comp/screen.css">
   <link rel="stylesheet" href="css/comp/button.css">
   <link rel="stylesheet" href="css/comp/modal.css">
@@ -80,14 +81,14 @@
 <div id="editor-screen" class="screen">
   
   <!--Menu principal del Editor-->
-  <div id="editor-main-menu" class="screen-editor-main-menu">
-    <span> 🗂️ </span>  
-    <span> ▶️ </span>
-    <span> ⚙️ </span>
+  <div id="editor-main-menu">
+    <span> <i class="fa fa-archive"></i> </span>  
+    <span> <i class="fa fa-play-circle"></i> </span>
+    <span> <i class="fa fa-cog"></i> </span>
   </div>
   
   <!-- Editor -->
-  <div class="editor">
+  <div id="editor" contenteditable="true">
     
     <!-- Numero de lineas -->
     <div class="frame-lines"></div>  
@@ -99,16 +100,14 @@
   
 
   <!--Barra de herramientas-->
-  <div id="toolbar" class="Toolbar">
+  <div id="editor-toolbar">
     <span> ••• </span>   
     <span> =>| </span>  
     <span> < </span> 
     <span> > </span>
-    </div>
+  </div>
   
   </div>
-
-</div>
 
 
   <!--Fin-->
