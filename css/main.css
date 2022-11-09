@@ -17,19 +17,6 @@
   user-select: none;
 }
 
-/* pantalla de aplicación */
-.screen {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  color: var(--accent-font-color);
-  background: var(--accent-color);
-  
-  display: flex;
-  flex-direction: column;
-}
-
 
 input {
   border: none;

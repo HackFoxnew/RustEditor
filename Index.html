@@ -7,17 +7,19 @@
   <title> RustEditor </title>
 
   <!-- css styles main -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/screen/main-screen.css">
+  <link rel="stylesheet" href="css/comp/screen.css">
   <link rel="stylesheet" href="css/comp/button.css">
   <link rel="stylesheet" href="css/comp/modal.css">
   <link rel="stylesheet" href="css/comp/appbar.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/screen/main-screen.css">
 
   <!--Editor css-->
-  <link rel="stylesheet" href="./css/screen/editor-screen.css">
-  <link rel="stylesheet" href="./css/RustEditor.css">
+  <link rel="stylesheet" href="css/screen/editor-screen.css">
+  <link rel="stylesheet" href="css/RustEditor.css">
   
   <!-- javascript -->
+  <script src="src/comp/screen.js"></script>
   <script src="src/main.js"></script>
 </head>
 
@@ -33,33 +35,24 @@
     </div>
     
     <!-- menú -->
-    <div onclick="$modalCreation.showModal()"
-         class="button"> Nuevo Proyecto </div>
-    <div class="button" onclick="Ajust()"> Ajustes </div>
+    <div class="button" onclick="$modalCreation.showModal()"> Nuevo Proyecto </div>
+    <div class="button" onclick="$modalAjust.showModal()"> Ajustes </div>
     <div class="button"> Acerca De </div>
     
-    
-    <dialog class="modal" id="AjustModal">
+    <!-- modal de ajustes -->
+    <dialog class="modal" id="modal-ajust">
       <div class="modal-content">
-    <div class="modal-header">Ajustes</div>
+        <div class="modal-header">Ajustes</div>
     
-    <div class="modal-body">
-      
-      
-      <section>
+        <div class="modal-body">
+          <section>
         
         
         
-      </section>
-      
-      
-      
-    </div>
-    
-    </div>
+          </section>
+        </div>
+      </div>
     </dialog>
-    
-    
     
     
     <!-- modal de creación de proyecto-->
@@ -83,40 +76,38 @@
 
 
 
-<!--Pantalla del editor-->
+<!-- Pantalla del editor -->
 <div id="editor-screen" class="screen">
   
   <!--Menu principal del Editor-->
   <div id="editor-main-menu" class="screen-editor-main-menu">
-  <span>🗂️</span>   <span>▶️</span> <span>⚙️</span>
+    <span> 🗂️ </span>  
+    <span> ▶️ </span>
+    <span> ⚙️ </span>
   </div>
   
-  <!--Editor-->
-    <div class="editor">
+  <!-- Editor -->
+  <div class="editor">
     
-    <!--Numero de linia-->
-  <div class="frame-lines">   
-    
-  </div>  
+    <!-- Numero de lineas -->
+    <div class="frame-lines"></div>  
    
-   <!--Cuadro de autocompletado--> 
- <div class="frame-autocomplete">
+    <!-- Cuadro de autocompletado --> 
+    <div class="frame-autocomplete"></div>
     
- </div>
-    
-    
-    
-     </div>
+  </div>
   
-  
-  
-  
-  
+
   <!--Barra de herramientas-->
   <div id="toolbar" class="Toolbar">
-    <span>•••</span>   <span>=>|</span>  <span><</span> <span>></span>
-  </div>
+    <span> ••• </span>   
+    <span> =>| </span>  
+    <span> < </span> 
+    <span> > </span>
+    </div>
   
+  </div>
+
 </div>
 
 

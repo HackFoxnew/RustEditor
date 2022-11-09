@@ -2,24 +2,24 @@ HTML = document;
 
 
 /* App main */
-let $mainScreen,
-    $modalCreation,
-    $inputCreation,
-    $btnModalCreation,
-    $btnCloseModalCreation;
 
 
 // evento de inicio
 function OnStart () {
+	
+  // gestionar pantallas
+  screenManager.addScreen("main-screen");
+  screenManager.addScreen("editor-screen");
+  screenManager.open("main-screen"); // mostrar pantalla
   
   // selecionado elementos 
-  $mainScreen = HTML.getElementById("main-screen");
   $modalCreation = HTML.getElementById("modal-creation");
+  $modalAjust = HTML.getElementById("modal-ajust");
   $btnModalCreation = HTML.getElementById("btn-creation");
   $inputCreation = HTML.getElementById("input-modal-creation");
   
   // validar  //Este evento detecta cada ves que se modifica el input 
-  $inputCreation.addEventListener("input", function InpButon() {
+  $inputCreation.addEventListener("input", function () {
     
     let classList = $btnModalCreation.classList;
     classList.remove("button-disabled");
@@ -29,19 +29,8 @@ function OnStart () {
       classList.add("button-disabled");
     } 
 
-  })
+  });
   
   
 
 }
-
-
-function Ajust(){
-  const AjustModal = HTML.getElementById("AjustModal")
-  
-  
-  AjustModal.showModal();
-  
-  
-}
-
