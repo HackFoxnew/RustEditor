@@ -17,14 +17,18 @@ let syntax = {
     /\n$/
   ],
 };
+/*
+console.log(syntaxToText(
+  "hola"
+))*/
 
-e(`
-# comentario
-[encabezado]
-var: "wiii"
-`)
+function syntaxToText (text) {
+  return text
+    .replace(/\<br\>/g, "\n")
+    .replace(/\<(.+?)\>/g, "");
+}
 
-function e (text) {
+function textToSyntax (text) {
   let input = text;
   let output = text;
   let replaceList = [];
@@ -40,12 +44,12 @@ function e (text) {
     let endCharIndex = -1;
     
     // buclear coincidencias
-    for (let match of matches) {
+    if (matches) for (let match of matches) {
       charIndex = input.indexOf(match, endCharIndex);
       endCharIndex = charIndex + match.length;
       
       let parsedMatch = stringToEntities(match);
-      let replace = atch;
+      let replace = match;
       if (arg[1]) replace = replace.replace(regIgnore, "");
       
       replaceList.push({
@@ -60,9 +64,7 @@ function e (text) {
   for (let i of replaceList) 
       output = output.replace(i.target, i.replace);
     
-  output = output.replace(/\n/g, "<br>");
-  console.log(input);
-  console.log(output);
+  return output.replace(/\n/g, "<br>");
 }
 
 function charToEntity (char) {

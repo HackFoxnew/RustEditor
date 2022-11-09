@@ -1,5 +1,13 @@
 /* Colors for keywords */
 
-.Comment{
-  color: ;
+.token-STRING {
+  color: red;
+}
+
+.token-COMMENT {
+  color: gray;
+}
+
+.token-HEAD {
+  color: green;
 }

@@ -1,19 +1,7 @@
 /* Editor Screen */
 
-
-
 #editor-screen {
   color: var(--editor-font-color);
-}
-
-
-#editor {
-  width: 100%;
-  flex-grow: 1;
-  overflow: auto;
-  background: var(--editor-color);
-  outline: none;
-  padding: 5px 9px;
 }
 
 /* app-bar del editor */
@@ -21,6 +9,7 @@
   display: flex;
   background: var(--editor-lightcolor);
 }
+
 
 #editor-main-menu > span {
   display: flex;
@@ -44,4 +33,40 @@
   justify-content: space-around;
   align-items: center;
   background: var(--editor-lightcolor);
+}
+
+
+
+/* Editor */
+.editor {
+  width: 100%;
+  flex-grow: 1;
+  
+  overflow: auto;
+  background: var(--editor-color);
+  outline: none;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.editor > .frame-autocomplete {
+  display: none;
+}
+
+.editor > .frame-lines,
+.editor > .frame-input {
+  font-size: 1rem;
+  font-family: monospace;
+  padding: 5px 9px;
+}
+
+.editor > .frame-lines {
+  background: var(--editor-darkcolor);
+  box-shadow: 1px 0 5px black;
+  text-align: center;
+}
+
+.editor > .frame-input {
+  flex-grow: 1;
 }

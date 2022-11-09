@@ -17,13 +17,14 @@
 
   <!--Editor css-->
   <link rel="stylesheet" href="css/screen/editor-screen.css">
+  <link rel="stylesheet" href="css/Tokens.css">
   <link rel="stylesheet" href="css/RustEditor.css">
   
   <!-- javascript -->
+  <script src="src/MachineRexExp/syntaxRules.js"></script>
   <script src="src/comp/screen.js"></script>
   <script src="src/main.js"></script>
 </head>
-
 
 <body onload="OnStart()">
 
@@ -88,13 +89,16 @@
   </div>
   
   <!-- Editor -->
-  <div id="editor" contenteditable="true">
+  <div class="editor">
     
     <!-- Numero de lineas -->
     <div class="frame-lines"></div>  
    
     <!-- Cuadro de autocompletado --> 
     <div class="frame-autocomplete"></div>
+    
+    <!-- area de escritura -->
+    <div class="frame-input" role="textarea" contenteditable="true"></div>
     
   </div>
   
