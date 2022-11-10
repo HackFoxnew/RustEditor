@@ -1,0 +1,9 @@
+{
+    "manifest":
+    {
+        "minSdkVersion": 23,
+        "targetSdkVersion": 32
+    },
+    "appIcon": "img/RustEditor.png",
+    "autoPermissions": false
+}
