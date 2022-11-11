@@ -11,3 +11,11 @@
 .token-HEAD {
   color: green;
 }
+
+.token-NUMBER{
+  color: blue;
+}
+
+.token-BOOLEAN{
+  color: purple;
+}
