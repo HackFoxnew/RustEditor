@@ -73,8 +73,7 @@
           <input id="input-modal-creation" placeholder="Entra el nombre de tu página">
         </div>
         <div class="modal-footer">
-          <div onclick="$modalCreation.close()"
-            class="button"> Salir </div>
+          <div onclick="$modalCreation.close()" class="button"> Salir </div>
           <div id="btn-creation" class="button button-disabled"> Crear </div>
         </div>
       </div>
@@ -99,15 +98,18 @@
   <!-- Editor -->
   <div class="editor">
     
-    <!-- Numero de lineas -->
+    <!-- Numero de líneas -->
     <div class="frame-lines"></div>  
    
     <!-- Cuadro de autocompletado --> 
     <div class="frame-autocomplete"></div>
     
-    <!-- area de escritura -->
-    <div class="frame-input" role="textarea" contenteditable="true"></div>
+    <!-- Área de resaltado (justo detras del area de escritura) -->
+    <div class="frame-highlight"></div>
     
+    <!-- Área de escritura -->
+    <textarea class="frame-input"></textarea>
+  
   </div>
   
 

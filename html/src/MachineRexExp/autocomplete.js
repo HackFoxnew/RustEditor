@@ -1,10 +1,8 @@
 let comandos = ["[core]"]
-let $editorInput = null;
 
 function Writing(){
-  $editorInput = document.querySelector(".editor > .frame-input");
   $editorInput.addEventListener("keydown", (event) => {
-    autocomplete(event);
+   // autocomplete(event);
     
   });
 
@@ -84,4 +82,3 @@ function hideResults() {
 }
 
 
-Writing()
