@@ -41,13 +41,14 @@
 .editor {
   width: 100%;
   flex-grow: 1;
+  position: relative;
   
   overflow: auto;
   background: var(--editor-color);
   
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-items: flex-start;
 }
 .editor > .frame-autocomplete {
   display: none;
@@ -70,10 +71,12 @@
   background: var(--editor-darkcolor);
   box-shadow: 1px 0 5px black;
   text-align: right;
+  height: 100%;
 }
 
 /* textarea */
 .editor > .frame-input {
+  overflow: hidden;
   position: relative;
   z-index: 2;
   flex-grow: 1;

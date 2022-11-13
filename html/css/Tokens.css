@@ -1,21 +1,30 @@
 /* Colors for keywords */
 
-.token-STRING {
-  color: red;
+.token-PROPERTY {
+  color: yellow
 }
+
 
 .token-COMMENT {
   color: gray;
 }
 
-.token-HEAD {
+.token-HEADER {
   color: green;
 }
 
-.token-NUMBER{
-  color: blue;
+.token-HEX {
+  color: orange
 }
 
-.token-BOOLEAN{
-  color: purple;
+.token-STRING {
+  color: red;
+}
+
+.token-NUMBER {
+  color: #77e4ff;
+}
+
+.token-BOOLEAN {
+  color: #e284ff;
 }

@@ -1,21 +1,47 @@
-// #TODO tokens rules
+
 /*
  * Array[0] => RegExp de búsqueda
  * Array[1] => RegExp para ignorar cadena de la busqueda
  */
+let _afterProperty = /^\: */;
 let syntax = {
   COMMENT: [
-    /&#35;(.*?)(\n|$)/g, 
+    /(&#47;){2}(.*?)(\n|$)/g, 
     /\n$/
   ],
+  
+  HEADER: [
+    /(^|\n)\[(.*?)\]/g, 
+    /(\[)|(\]$)/g
+  ],
+  
+  // tipos de datos 
   STRING: [
-    /&#34;(.*?)&#34;/g, 
-    null
+    /\:(&nbsp;)*&#34;(.*?)&#34;/g, 
+    _afterProperty
   ],
-  HEAD: [
-    /\[(.*?)\]/g, 
-    null//(^\[)|(\]$)/g
+  
+  NUMBER: [
+    /\:(&nbsp;)*([0-9]+(\.[0-9]+){0,1})/g,
+    _afterProperty
   ],
+  
+  BOOLEAN: [
+    /\:(&nbsp;)*(true|false)/g,
+    _afterProperty
+  ],
+  
+  HEX: [
+    /\:(&nbsp;)*&#35;([0-9a-fA-F]{3,8})/g, 
+    _afterProperty
+  ],
+  
+  // propiedad
+  //PROPERTY: [
+  //  /(^|\n)(.+?)\:/g,
+  //  null,
+  //],
+
 };
 
 
@@ -56,7 +82,7 @@ function textToSyntax (text) {
 // convertir letra a entidad html
 function charToEntity (char) {
   return (char.match(/[a-z0-9\s]+/i)) ? char : "&#" + char.charCodeAt(0) + ";";
-};
+}
 
 // convertir texto a entidades html
 function stringToEntities (str) {
@@ -65,7 +91,9 @@ function stringToEntities (str) {
 
 // convertir las etiquetas del texto a entidades html
 function tagsToEntities (str) {
-  return str.replace(/\#|\>|\"|\/|\</g, function(s){
+  return str.replace(/\#| |\>|\"|\/|\</g, function(s){
+    if (s === " ") return "&nbsp;";
+    
     return "&#" + s.charCodeAt(0) + ";";
   });
 }
