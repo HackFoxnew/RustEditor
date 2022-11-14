@@ -21,3 +21,10 @@
   justify-content: center;
   align-items: center;
 }
+
+.menu-carpetas-espacio-trabajo{
+  background: red;
+  height: 400px;
+  border-bottom: 2px solid #131A2D;
+ overflow: auto;
+}

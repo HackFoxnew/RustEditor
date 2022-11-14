@@ -1,10 +1,17 @@
 function iniWorker(){
-  let d = document;
+   d = document;
+   //Fixed no coje los eventos 
   const MenuCarpetas = d.querySelector(".menu-carpetas-espacio-trabajo");
   
   //Todos los hijos de MenuCarpetas heredan el evento 
-  MenuCarpetas.addEventListener("touch",ingresar())
+  MenuCarpetas.addEventListener("click",ingresar())
   
+  MenuCarpetas.addEventListener("dblclick",function menuAbrir(){
+    const MenuGestionWorker = document.getElementById("MenuGestionWorker");
+   
+   MenuGestionWorker.close()
+  })
+    
   
   
 }
@@ -29,4 +36,10 @@ function ingresar(){
 }
 
 
+
+function SelectionMenu(){
+   const MenuGestionWorker = document.getElementById("MenuGestionWorker");
+   
+   MenuGestionWorker.show()
+}
 
