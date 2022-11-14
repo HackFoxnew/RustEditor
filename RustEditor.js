@@ -5,8 +5,8 @@ cfg.Light;
 function OnStart () {
   
   app.SetOnShowKeyboard(OnKeyboard);
-  app.SetOrientation("Portrait");
-  
+  //app.SetOrientation("Portrait");
+ 
   // elementos
   layout = app.CreateLayout("Linear", "FillXY");
   viewApp = app.CreateWebView(1, 1);

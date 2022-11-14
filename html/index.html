@@ -5,9 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> RustEditor </title>
-  <script src="libs/eruda.min.js"
-          onload="eruda.init()"></script>
-
+  <script src="libs/eruda.min.js" onload="eruda.init()"></script>
+  
+  <!-- droidscript API -->
+  <script src="libs/droid/droid.js"></script>
+  <script src="libs/droid/droid_control.js"></script>
+  <script src="libs/droid/droid_files.js"></script>
+  
   <!-- css styles main -->
   <link rel="stylesheet" href="libs/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/comp/screen.css">
@@ -23,15 +27,15 @@
   <link rel="stylesheet" href="css/RustEditor.css">
   
   <!-- javascript -->
-  <script src="src/MachineRexExp/autocomplete.js" async></script>
-  <script src="src/commands/commands-editor.js"></script>
-  <script src="src/comp/editor-toolbar.js"></script>
-  <script src="src/comp/screen.js"></script>
-  <script src="src/screen/main-screen.js"></script>
-  <script src="src/screen/editor-screen.js"></script>
-  <script src="src/MachineRexExp/syntaxRules.js"></script>
-  <script src="src/utils.js"></script>
-  <script src="src/main.js"></script>
+  <script src="js/MachineRexExp/autocomplete.js" async></script>
+  <script src="js/commands/commands-editor.js"></script>
+  <script src="js/comp/editor-toolbar.js"></script>
+  <script src="js/comp/screen.js"></script>
+  <script src="js/screen/main-screen.js"></script>
+  <script src="js/screen/editor-screen.js"></script>
+  <script src="js/MachineRexExp/syntaxRules.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body onload="OnStart()">

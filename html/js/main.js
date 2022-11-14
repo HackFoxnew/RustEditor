@@ -7,6 +7,9 @@ HTML = document;
 // evento de inicio
 function OnStart () {
 	
+	// inicializar sistema de DroidScript
+	droid.start();
+	
   // gestionar pantallas
   screenManager.addScreen("main-screen");
   screenManager.addScreen("editor-screen");
