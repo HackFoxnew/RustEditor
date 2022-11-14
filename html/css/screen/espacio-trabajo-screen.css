@@ -1,0 +1,23 @@
+
+
+*{
+  margin: 0;
+}
+
+#nombre-menu{
+  display: inline;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.menu-espacio-trabajo{
+  padding: 10px;
+  background: #67697F;
+  border-radius: 0 0 0 0;
+}
+
+.menu-search-espacio-trabajo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

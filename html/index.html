@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> RustEditor </title>
-  <script src="libs/eruda.min.js" onload="eruda.init()"></script>
+  <script async src="libs/eruda.min.js" onload="eruda.init()"></script>
   
   <!-- droidscript API -->
-  <script src="libs/droid/droid.js"></script>
-  <script src="libs/droid/droid_control.js"></script>
-  <script src="libs/droid/droid_files.js"></script>
+  <script async src="libs/droid/droid.js"></script>
+  <script async src="libs/droid/droid_control.js"></script>
+  <script async src="libs/droid/droid_files.js"></script>
   
   <!-- css styles main -->
   <link rel="stylesheet" href="libs/fa/css/font-awesome.min.css">
@@ -26,16 +26,25 @@
   <link rel="stylesheet" href="css/Tokens.css">
   <link rel="stylesheet" href="css/RustEditor.css">
   
+  
+  <!--Espacio de trabajo css-->
+  <link rel="stylesheet" href="css/screen/espacio-trabajo-screen.css">
+  
+  
+  <!--Espacio de trabajo Javascrip-->
+  <script async src="js/screen/screen-espacio-trabajo.js"></script>
+  
+  
   <!-- javascript -->
-  <script src="js/MachineRexExp/autocomplete.js" async></script>
-  <script src="js/commands/commands-editor.js"></script>
-  <script src="js/comp/editor-toolbar.js"></script>
-  <script src="js/comp/screen.js"></script>
-  <script src="js/screen/main-screen.js"></script>
-  <script src="js/screen/editor-screen.js"></script>
-  <script src="js/MachineRexExp/syntaxRules.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/main.js"></script>
+  <script async src="js/MachineRexExp/autocomplete.js"></script>
+  <script async src="js/commands/commands-editor.js"></script>
+  <script async src="js/comp/editor-toolbar.js"></script>
+  <script async src="js/comp/screen.js"></script>
+  <script async src="js/screen/main-screen.js"></script>
+  <script async src="js/screen/editor-screen.js"></script>
+  <script async src="js/MachineRexExp/syntaxRules.js"></script>
+  <script async src="js/utils.js"></script>
+  <script async src="js/main.js"></script>
 </head>
 
 <body onload="OnStart()">
@@ -126,6 +135,59 @@
   </div>
   
   </div>
+
+
+
+<div id="screen-espacio-trabajo" class="screen">
+ 
+ <div class="menu-espacio-trabajo">
+   <span>🔙</span>  <h1 id="nombre-menu">Espacio de trabajo</h1>   <span>🗃</span>   <span>•••</span>   
+ </div>
+  
+  
+  <div class="menu-search-espacio-trabajo">
+    <input type="text" placeholder="Area de búsqueda de proyecto">
+  </div>
+  
+  <br>
+  
+  <div class="menu-carpetas-espacio-trabajo">
+    
+    <!--Archivo suelto-->
+    <div>
+      <img width="50" height="50" src="/RustEditor/asset/Screenshot_20221110-210539.jpg" alt=""> <span>Nombre de archivo</span>
+      <br>
+      <span>peso</span>
+      <hr>
+    </div>
+
+    <div>
+      <img width="50" height="50" src="/RustEditor/asset/Screenshot_20221110-210539.jpg" alt=""> <span>Nombre de archivo</span>
+      <br>
+      <span>peso</span>
+      <hr>
+    </div>
+    
+        <div>
+      <img width="50" height="50" src="/RustEditor/asset/Screenshot_20221110-210539.jpg" alt=""> <span>Nombre de archivo</span>
+      <br>
+      <span>peso</span>
+      <hr>
+    </div>
+    
+    
+    <!--Carpeta-->
+    
+    
+    
+    
+  </div>
+  
+  
+  
+</div>
+
+
 
 
   <!--Fin-->
