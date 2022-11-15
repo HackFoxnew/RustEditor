@@ -9,52 +9,61 @@
   
   <!-- droidscript API -->
   <script  src="libs/droid/droid.js"></script>
-  <script  src="libs/droid/droid_control.js"></script>
-  <script  src="libs/droid/droid_files.js"></script>
+  <script  src="libs/droid/droid_ctrl.js"></script>
+  <script  src="libs/droid/droid_fs.js"></script>
+  <script  src="libs/droid/droid_dlg.js"></script>
   
-  <!-- css styles main -->
-  <link rel="stylesheet" href="libs/fa/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/comp/screen.css">
-  <link rel="stylesheet" href="css/comp/button.css">
-  <link rel="stylesheet" href="css/comp/modal.css">
-  <link rel="stylesheet" href="css/comp/appbar.css">
+  <!-- /// css styles /// -->
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/screen/main-screen.css">
-
-  <!--Editor css-->
-  <link rel="stylesheet" href="css/screen/editor-screen.css">
   <link rel="stylesheet" href="css/Tokens.css">
   <link rel="stylesheet" href="css/RustEditor.css">
   
+  <!-- css componentes -->
+  <link rel="stylesheet" href="libs/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/comp/screen.css">
+  <link rel="stylesheet" href="css/comp/button.css">
+  <link rel="stylesheet" href="css/comp/fab.css">
+  <link rel="stylesheet" href="css/comp/list-view.css">
+  <link rel="stylesheet" href="css/comp/modal.css">
+  <link rel="stylesheet" href="css/comp/appbar.css">
   
-  <!--Espacio de trabajo css-->
-  <link rel="stylesheet" href="css/screen/espacio-trabajo-screen.css">
+  <!-- css pantallas -->
+  <link rel="stylesheet" href="css/screen/main-screen.css">
+  <link rel="stylesheet" href="css/screen/editor-screen.css">
+  <link rel="stylesheet" href="css/screen/work-screen.css">
+ 
+
   
-  
-  <!--Espacio de trabajo Javascrip-->
-  <script  src="js/screen/screen-espacio-trabajo.js"></script>
-  
-  
-  <!-- javascript -->
-  <script  src="js/MachineRexExp/autocomplete.js"></script>
-  <script  src="js/commands/commands-editor.js"></script>
-  <script  src="js/comp/editor-toolbar.js"></script>
-  <script  src="js/comp/screen.js"></script>
-  <script  src="js/screen/main-screen.js"></script>
-  <script  src="js/screen/editor-screen.js"></script>
-  <script  src="js/MachineRexExp/syntaxRules.js"></script>
-  <script  src="js/utils.js"></script>
+  <!-- /// js scripts /// -->
   <script  src="js/main.js"></script>
+  <script  src="js/utils.js"></script>
+  <script  src="libs/path.js"></script>
+  
+  <!-- js editor -->
+  <script  src="js/editor/syntaxRules.js"></script>
+  <script  src="js/editor/autocomplete.js"></script>
+  <script  src="js/editor/commands-editor.js"></script>
+  
+  <!-- js componentes -->
+  <script  src="js/comp/editor-toolbar.js"></script>
+  <script  src="js/comp/list-view.js"></script>
+  <script  src="js/comp/screen.js"></script>
+  
+  <!-- js pantallas -->
+  <script  src="js/screen/main-screen.js"></script>
+  <script  src="js/screen/work-screen.js"></script>
+  <script  src="js/screen/editor-screen.js"></script>
+  
 </head>
 
 <body onload="OnStart()">
 
-  <!-- pantalla principal -->
+  <!-- Pantalla menú principal -->
   <div id="main-screen" class="screen">
    
     <!-- barra de aplicación -->
     <div class="app-bar"> 
-      <h1> RustEdit </h1>
+      <div class="app-bar--title"> RustEdit </div>
     </div>
     
     <!-- menú -->
@@ -95,6 +104,28 @@
   </div>
 
 
+<!-- Área de Trabajo -->
+<div id="work-screen" class="screen">
+  
+  <!-- barra -->
+  <div class="app-bar">
+    <div class="app-bar--left">
+      <i class="fa fa-arrow-left"></i>
+    </div>
+    <div class="app-bar--title"> Espacio de Trabajo </div>
+  </div>
+  
+  <!-- Mostrar directorios -->
+  <div id="work-dir-view"></div>
+  
+  <!-- boton flotante -->
+  <div class="fab">
+    <i class="fa fa-plus"></i>
+  </div>
+  
+  <!-- lista de carpetas -->
+  <ul id="work-folder-list" class="list-view"></ul>
+</div>
 
 
 
@@ -134,75 +165,7 @@
     <span> > </span>
   </div>
   
-  </div>
-
-
-
-<div id="screen-espacio-trabajo" class="screen">
- 
- <div class="menu-espacio-trabajo">
-   <span>🔙</span>  <h1 id="nombre-menu">Espacio de trabajo</h1>   <span>🗃</span>   <span onclick="SelectionMenu()">•••</span>   
- </div>
-  
-  
-  <div>
-  <dialog id="MenuGestionWorker">
-    
-    <img src="asset/imagenPrueba.jpeg" alt=""> <p>Nuevo proyecto</p>
-    <hr>
-    
-    <img src="asset/imagenPrueba.jpeg" width="20px" height="20px" alt=""> <p>Importar proyecto</p>
-    <hr>
-    
-  
- </dialog>
-  
-  </div>
-
-  
-  <div class="menu-search-espacio-trabajo">
-    <input type="text" placeholder="Area de búsqueda de proyecto">
-  </div>
-  
-  <br>
-  
-  <div class="menu-carpetas-espacio-trabajo">
-    
-    <!--Archivo suelto-->
-    <div>
-      <img width="50" height="50" src="/RustEditor/asset/Screenshot_20221110-210539.jpg" alt=""> <span>Nombre de archivo</span>
-      <br>
-      <span>peso</span>
-      <hr>
-    </div>
-
-    <div>
-      <img width="50" height="50" src="/RustEditor/asset/Screenshot_20221110-210539.jpg" alt=""> <span>Nombre de archivo</span>
-      <br>
-      <span>peso</span>
-      <hr>
-    </div>
-    
-        <div>
-      <img width="50" height="50" src="/RustEditor/asset/Screenshot_20221110-210539.jpg" alt=""> <span>Nombre de archivo</span>
-      <br>
-      <span>peso</span>
-      <hr>
-    </div>
-    
-    
-    <!--Carpeta-->
-    
-    
-    
-    
-  </div>
-  
-  
-  
 </div>
-
-
 
 
   <!--Fin-->

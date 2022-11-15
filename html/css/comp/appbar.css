@@ -1,12 +1,51 @@
 /* application bar */
 
+
+
 .app-bar {
+  z-index: 3;
+  
   width: 100%;
-  padding: 20px;
+  padding: 1.2rem 0;
   background: var(--primary-color);
   color: var(--primary-font-color);
+  box-shadow: 0 4px 9px rgba(0,0,0,.5);
   
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+/* encabezado de la barra (título) */
+.app-bar > .app-bar--title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-grow: 1;
+  padding-left: .7rem;
+}
+
+/* lado izquierdo y derecho de la barra */
+.app-bar > .app-bar--left,
+.app-bar > .app-bar--right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 1.2rem;
+}
+
+.app-bar--left {
+  padding-left: .7rem;
+}
+
+.app-bar--right > i,
+.app-bar--left > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: rgba(255, 255, 255, .07);
 }

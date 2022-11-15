@@ -11,6 +11,7 @@ function OnStart () {
   layout = app.CreateLayout("Linear", "FillXY");
   viewApp = app.CreateWebView(1, 1);
   viewApp.LoadUrl("html/index.html");
+  app.ShowProgress("Espere un momento...");
    
   // agregar a la aplicación 
   layout.AddChild(viewApp);
