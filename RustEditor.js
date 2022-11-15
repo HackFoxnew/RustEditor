@@ -19,8 +19,13 @@ function OnStart () {
   
 }
 
+// evento al rotar pantalla
+function OnConfig () {
+  let show = app.IsKeyboardShown();
+  OnKeyboard(show);
+}
 
-// ajuste de teclado
+// evento al mostrar teclado
 function OnKeyboard (show) {
   if (show) {
     let width = app.GetScreenWidth();
