@@ -9,8 +9,17 @@ droid = {
   
   // @droid.task() ~ solitar tarea
   task (task, ...params) {
-    let request = "App." + task + "(";
-    for (let param of params) request += "\f" + param;
+    let request = "App." + task.replace("$", "") + "(";
+    
+    // si el primer parámetro no require \f
+    let i = 0;
+    if (task.indexOf("$") != -1) request += params[i++];
+    
+    // insertar parámetros en solicitud
+    for (i; i < params.length; i++)
+        request += "\f" + params[i];
+    
+    // solicitar tarea
     return prompt("#", request);
   },
   
