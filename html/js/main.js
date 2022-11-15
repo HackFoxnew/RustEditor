@@ -10,6 +10,8 @@ function OnStart () {
 	// inicializar sistema de DroidScript
 	droid.start();
 	droid.task("SetOnError", "OnError");
+	internalFolder = droid.GetInternalFolder();
+	externalFolder = droid.GetExternalFolder();
 	
 	
   // gestionar pantallas

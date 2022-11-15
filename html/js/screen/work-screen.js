@@ -6,7 +6,7 @@ function initWorkScreen(){
   $workDirView = document.getElementById("work-dir-view");
   
   // navegar por el almacenamiento interno
-  navigateFolders(droid.GetInternalFolder());
+  navigateFolders(internalFolder);
   
   delete window.initWorkScreen;
 }
@@ -16,12 +16,19 @@ function initWorkScreen(){
 // navegar por las carpetas
 function navigateFolders (dir) {
   droid.ShowProgress("Escaneando...");
-  let files = [".."]
+  
+  let files = [];
+  
+  // si no estamos en el directorio raiz, podemos retroceder
+  if (dir != internalFolder) files.push("..");
+  
+  files = files
     .concat(droid.ListFolder(dir, null, null, "folders"))
     .concat(droid.ListFolder(dir, null, null, "files"));
   
-  $workDirView.innerText = dir;
+  $workDirView.innerText = dir; // mostrar directorio actual
   
+  // añadir cada direccion a la lista
   for (let file of files) {
     let basename = file;
     let absDir = Path.join(dir, file);
