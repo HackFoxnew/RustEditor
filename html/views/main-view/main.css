@@ -1,8 +1,8 @@
 /* Main Screen */
 
-#main-screen {}
+#main-view {}
 
-#main-screen > .button {
+#main-view > .button {
   margin-top: 10px;
   align-self: center;
   width: 70%;

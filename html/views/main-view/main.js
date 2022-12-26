@@ -1,6 +1,6 @@
 // Main Screen
 
-function initMainScreen () {
+function initMainView () {
   
   // seleccionar elementos
   $modalCreation = HTML.getElementById("modal-creation");
@@ -21,5 +21,5 @@ function initMainScreen () {
   });
   
   
-  delete window.initMainScreen;
+  initMainView = null;
 }

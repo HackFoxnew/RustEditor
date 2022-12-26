@@ -1,6 +1,6 @@
 /* app screen */
 
-.screen {
+.view {
   position: fixed;
   top: 0; 
   left: 0;
@@ -10,5 +10,11 @@
   background: var(--accent-color);
   
   display: none;
+  z-index: 0;
+}
+
+.view-visible {
+  display: flex;
   flex-direction: column;
+  z-index: 3;
 }

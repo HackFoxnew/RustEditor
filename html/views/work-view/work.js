@@ -1,6 +1,6 @@
-// Workspace Screen
+// Workspace View
 
-function initWorkScreen(){
+function initWorkView () {
   let $ul = document.getElementById("work-folder-list");
   $workListView = new ListView($ul);
   $workDirView = document.getElementById("work-dir-view");
@@ -8,7 +8,7 @@ function initWorkScreen(){
   // navegar por el almacenamiento interno
   navigateFolders(internalFolder);
   
-  delete window.initWorkScreen;
+  initWorkView = null;
 }
 
 

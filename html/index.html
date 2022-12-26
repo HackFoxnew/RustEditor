@@ -5,61 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> RustEditor </title>
-  <script  src="libs/eruda.min.js" onload="eruda.init()"></script>
+  
   
   <!-- droidscript API -->
-  <script  src="libs/droid/droid.js"></script>
-  <script  src="libs/droid/droid_ctrl.js"></script>
-  <script  src="libs/droid/droid_fs.js"></script>
-  <script  src="libs/droid/droid_dlg.js"></script>
+  <script src="libs/droid/droid.js"></script>
+  <script src="libs/droid/droid_ctrl.js"></script>
+  <script src="libs/droid/droid_fs.js"></script>
+  <script src="libs/droid/droid_dlg.js"></script>
   
-  <!-- /// css styles /// -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/Tokens.css">
-  <link rel="stylesheet" href="css/RustEditor.css">
   
-  <!-- css componentes -->
+  <!-- libs -->
   <link rel="stylesheet" href="libs/fa/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/comp/screen.css">
-  <link rel="stylesheet" href="css/comp/button.css">
-  <link rel="stylesheet" href="css/comp/fab.css">
-  <link rel="stylesheet" href="css/comp/list-view.css">
-  <link rel="stylesheet" href="css/comp/modal.css">
-  <link rel="stylesheet" href="css/comp/appbar.css">
+  <script src="libs/eruda.min.js" onload="eruda.init()"></script>
+  <script src="libs/path.js"></script>
   
-  <!-- css pantallas -->
-  <link rel="stylesheet" href="css/screen/main-screen.css">
-  <link rel="stylesheet" href="css/screen/editor-screen.css">
-  <link rel="stylesheet" href="css/screen/work-screen.css">
+  
+  <!-- primary files-->
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js"></script>
+  <script src="js/utils.js"></script>
+  
+  
+  <!-- components -->
+  <link rel="stylesheet" href="comp/view/view.css">
+  <link rel="stylesheet" href="comp/button/button.css">
+  <link rel="stylesheet" href="comp/fab/fab.css">
+  <link rel="stylesheet" href="comp/list-view/list-view.css">
+  <link rel="stylesheet" href="comp/modal/modal.css">
+  <link rel="stylesheet" href="comp/appbar/appbar.css">
+  
+  <script src="comp/list-view/list-view.js"></script>
+  <script src="comp/view/view.js"></script>
+  
+  
+  <!-- views -->
+  <link rel="stylesheet" href="views/main-view/main.css">
+  <link rel="stylesheet" href="views/work-view/work.css">
+  <link rel="stylesheet" href="views/editor-view/editor.css">
  
-
+  <script src="views/main-view/main.js"></script>
+  <script src="views/work-view/work.js"></script>
+  <script src="views/editor-view/editor.js"></script>
   
-  <!-- /// js scripts /// -->
-  <script  src="js/main.js"></script>
-  <script  src="js/utils.js"></script>
-  <script  src="libs/path.js"></script>
   
-  <!-- js editor -->
-  <script  src="js/editor/syntaxRules.js"></script>
-  <script  src="js/editor/autocomplete.js"></script>
-  <script  src="js/editor/commands-editor.js"></script>
-  
-  <!-- js componentes -->
-  <script  src="js/comp/editor-toolbar.js"></script>
-  <script  src="js/comp/list-view.js"></script>
-  <script  src="js/comp/screen.js"></script>
-  
-  <!-- js pantallas -->
-  <script  src="js/screen/main-screen.js"></script>
-  <script  src="js/screen/work-screen.js"></script>
-  <script  src="js/screen/editor-screen.js"></script>
+  <!-- editor -->
+  <link rel="stylesheet" href="views/editor-view/tokens.css">
+  <script src="views/editor-view/functions/syntax.js"></script>
+  <script src="views/editor-view/functions/autocomplete.js"></script>
+  <script src="views/editor-view/functions/commands.js"></script>
   
 </head>
 
 <body onload="OnStart()">
 
   <!-- Pantalla menú principal -->
-  <div id="main-screen" class="screen">
+  <div id="main-view" class="view">
    
     <!-- barra de aplicación -->
     <div class="app-bar"> 
@@ -77,11 +77,7 @@
         <div class="modal-header">Ajustes</div>
     
         <div class="modal-body">
-          <section>
-        
-        
-        
-          </section>
+          <section></section>
         </div>
       </div>
     </dialog>
@@ -105,7 +101,7 @@
 
 
 <!-- Área de Trabajo -->
-<div id="work-screen" class="screen">
+<div id="work-view" class="view">
   
   <!-- barra -->
   <div class="app-bar">
@@ -130,7 +126,7 @@
 
 
 <!-- Pantalla del editor -->
-<div id="editor-screen" class="screen">
+<div id="editor-view" class="view">
   
   <!--Menu principal del Editor-->
   <div id="editor-main-menu">

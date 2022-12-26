@@ -1,27 +1,26 @@
-// screenManager component
+// viewManager component
 
-screenManager = {
+viewManager = {
 
-  screens: {}, // lista de pantallas
+  views: {}, // lista de pantallas
   history: [], // historial de pantallas abiertas
   index: -1,   // posicion en el historial
 
 
-  // @addScreen(id) ~ añadir pantalla
-  addScreen: function (id) {
-    this.screens[id] = HTML.getElementById(id);
+  // @add(id) ~ añadir pantalla
+  add: function (id) {
+    this.views[id] = HTML.getElementById(id);
   },
 
 
   // @open(id) ~ mostrar pantalla
   open: function (id) {
     let history = this.history;
-    let $lastScreen = this.screens[history[this.index]]; // pantalla abierta
-    let $targetScreen = this.screens[id]; // pantalla a abrir
+    let $lastView = this.views[history[this.index]]; // pantalla abierta
+    let $targetView = this.views[id]; // pantalla a abrir
 
-    if ($lastScreen) $lastScreen.style.display = "none";
-    $targetScreen.style.display = "flex";
-    $targetScreen.style.flexDirection = "column";
+    if ($lastView) $lastView.classList.remove("view-visible");
+    $targetView.classList.add("view-visible");
 
     history.push(id); // añadir esta pantalla al historial
     this.index++;

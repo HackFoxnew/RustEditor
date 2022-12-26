@@ -2,7 +2,7 @@
 
 
 // @Init: inicializar pantalla de editor
-function initEditorScreen () {
+function initEditorView () {
   
   // selecionar elementos
   $editor = HTML.querySelector(".editor");
@@ -37,7 +37,7 @@ function initEditorScreen () {
   });
   
   
-  delete window.initEditorScreen;
+  initEditorView = null;
 }
 
 

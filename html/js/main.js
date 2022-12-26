@@ -6,25 +6,26 @@ HTML = document;
 
 // evento de inicio
 function OnStart () {
-	
-	// inicializar sistema de DroidScript
-	droid.start();
-	droid.task("SetOnError", "OnError");
-	internalFolder = droid.GetInternalFolder();
-	externalFolder = droid.GetExternalFolder();
-	
-	
+
+  // inicializar sistema de DroidScript
+  droid.start();
+  droid.task("SetOnError", "OnError");
+  
+  internalFolder = droid.GetInternalFolder();
+  externalFolder = droid.GetExternalFolder();
+
+
   // gestionar pantallas
-  screenManager.addScreen("main-screen");
-  screenManager.addScreen("work-screen")
-  screenManager.addScreen("editor-screen");
-  screenManager.open("work-screen"); // mostrar pantalla
-  
+  viewManager.add("main-view");
+  viewManager.add("work-view")
+  viewManager.add("editor-view");
+  viewManager.open("work-view"); // mostrar pantalla
+
   // inicializar pantallas
-  initMainScreen();
-  initWorkScreen();
-  initEditorScreen();
-  
+  initMainView();
+  initWorkView();
+  initEditorView();
+
   // ocultar cargando
   droid.HideProgress();
 }
