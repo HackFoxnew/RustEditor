@@ -61,41 +61,17 @@
   <!-- Pantalla menú principal -->
   <div id="main-view" class="view">
    
-    <!-- barra de aplicación -->
-    <div class="app-bar"> 
-      <div class="app-bar--title"> RustEdit </div>
-    </div>
-    
-    <!-- menú -->
-    <div class="button" onclick="$modalCreation.showModal()"> Nuevo Proyecto </div>
-    <div class="button" onclick="$modalAjust.showModal()"> Ajustes </div>
-    <div class="button"> Acerca De </div>
-    
-    <!-- modal de ajustes -->
-    <dialog class="modal" id="modal-ajust">
-      <div class="modal-content">
-        <div class="modal-header">Ajustes</div>
-    
-        <div class="modal-body">
-          <section></section>
-        </div>
-      </div>
-    </dialog>
-    
-    
-    <!-- modal de creación de proyecto-->
-    <dialog id="modal-creation" class="modal">
-      <div class="modal-content">
-        <div class="modal-header"> Nuevo Proyecto </div>
-        <div class="modal-body">
-          <input id="input-modal-creation" placeholder="Entra el nombre de tu página">
-        </div>
-        <div class="modal-footer">
-          <div onclick="$modalCreation.close()" class="button"> Salir </div>
-          <div id="btn-creation" class="button button-disabled"> Crear </div>
-        </div>
-      </div>
-    </dialog>
+   
+  <div class="app-br " id="SelectionMenuView"></div>
+  
+  <div id="MainScreen"></div>
+  
+  <div id="InformationMenu" ></div>
+  
+  
+  
+  
+  
 
   </div>
 
@@ -130,7 +106,14 @@
   
   <!--Menu principal del Editor-->
   <div id="editor-main-menu">
-    <span> <i class="fa fa-archive"></i> </span>  
+    
+    <span> <i onclick="IntegratedWorkSpace()"  class="fa fa-archive"></i> </span>  
+    <div id="MenuEmbebedWork" class="list-view">
+      
+    </div>
+    
+    
+    
     <span> <i class="fa fa-play-circle"></i> </span>
     <span> <i class="fa fa-cog"></i> </span>
   </div>

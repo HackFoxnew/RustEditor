@@ -1,10 +1,2 @@
 /* Main Screen */
 
-#main-view {}
-
-#main-view > .button {
-  margin-top: 10px;
-  align-self: center;
-  width: 70%;
-  padding: 20px;
-}

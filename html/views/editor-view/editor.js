@@ -79,6 +79,7 @@ function renderEditorInput () {
 
 
 
+
 // @void ~ Actualizar resaltado
 function renderHighlight () {
   $editorHighlight.innerHTML = textToSyntax(
@@ -90,5 +91,13 @@ function renderHighlight () {
   $editorHighlight.style.top = 
     $editorInput.offsetTop -
     $editor.scrollTo/2 + "px";
+  
+}
+
+
+function IntegratedWorkSpace(){
+  let MenuWork = document.getElementById("MenuEmbebedWork");
+  
+  alert("Hola");
   
 }

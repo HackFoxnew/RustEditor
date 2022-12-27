@@ -19,7 +19,7 @@ function OnStart () {
   viewManager.add("main-view");
   viewManager.add("work-view")
   viewManager.add("editor-view");
-  viewManager.open("work-view"); // mostrar pantalla
+  viewManager.open("main-view"); // mostrar pantalla
 
   // inicializar pantallas
   initMainView();
